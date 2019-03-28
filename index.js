@@ -3,7 +3,10 @@ require('dotenv').config();
 const server = require('./api/server.js');
 
 
-const port = process.env.PORT 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
 
 // const greeting = process.env.GREETING
 
